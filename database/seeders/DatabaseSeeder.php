@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use App\Models\Post;
+use App\Models\Blog;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,17 +22,20 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Post::create([
+        Blog::create([
             'title' => 'Tutorial Laravel 9',
+            'slug' => 'tutorial-laravel',
             'content' => 'Cara membuat aplikasi Blog dengan Laravel 9'
         ]);
-        Post::create([
-            'title' => 'Tutorial Vue JS',
-            'content' => 'Cara membuat aplikasi SPA dengan Vue JS'
-        ]);
-        Post::create([
+        Blog::create([
             'title' => 'Tutorial Kotlin',
+            'slug' => 'tutorial-kotlin',
             'content' => 'Cara membuat aplikasi Android dengan Kotlin'
+        ]);
+        Blog::create([
+            'title' => 'Tutorial Bootstrap',
+            'slug' => 'tutorial-bootstrap',
+            'content' => 'Cara membuat aplikasi Blog dengan Bootstrap'
         ]);
     }
 }
